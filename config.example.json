@@ -1,0 +1,41 @@
+{
+  "ownerQQ": 100000000,
+  "consolePort": 3100,
+  "consoleToken": "REPLACE_WITH_A_RANDOM_TOKEN_AT_LEAST_16_CHARS",
+  "allow": {
+    "groups": [111111111],
+    "private": [100000000]
+  },
+  "snowluma": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "accessToken": "REPLACE_WITH_YOUR_ONEBOT_WS_TOKEN",
+    "homeDir": "C:\\SnowLuma"
+  },
+  "dsh": {
+    "baseUrl": "http://127.0.0.1:50000",
+    "provider": "deepseek-account",
+    "model": "deepseek-flash",
+    "reasoningEffort": "high"
+  },
+  "socialV2": {
+    "enabled": true,
+    "voice": {
+      "enabled": true,
+      "dir": "audio",
+      "maxSeconds": 300,
+      "maxBytes": 20971520,
+      "maxPerMinute": 0,
+      "maxPerHour": 0,
+      "allowAbsolutePath": false,
+      "autoReadback": true
+    },
+    "proactive": {
+      "enabled": true,
+      "checkIntervalMinMs": 1800000,
+      "checkIntervalMaxMs": 5400000,
+      "idleThresholdMs": 900000,
+      "probability": 0.3,
+      "disabledGroups": []
+    }
+  }
+}

@@ -1,0 +1,13 @@
+--- a/GPT_SoVITS/TTS_infer_pack/TTS.py
++++ b/GPT_SoVITS/TTS_infer_pack/TTS.py
+@@
+         assert isinstance(configs, dict)
+-        version = configs.get("version", "v2").lower()
+-        assert version in ["v1", "v2", "v3", "v4", "v2Pro", "v2ProPlus"]
++        # Upstream bug: the value is lowercased before being compared with a list that
++        # contains mixed-case entries, so "v2Pro" / "v2ProPlus" can never pass the assert.
++        # Keep the comparison case-insensitive and restore the canonical spelling:
++        # self.version is later compared with exact strings such as "v2Pro".
++        _CANON = {name.lower(): name for name in ["v1", "v2", "v3", "v4", "v2Pro", "v2ProPlus"]}
++        version = _CANON.get(str(configs.get("version", "v2")).strip().lower(), "v2")
+         self.default_configs[version] = configs.get(version, self.default_configs[version])

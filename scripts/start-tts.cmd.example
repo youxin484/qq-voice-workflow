@@ -1,0 +1,7 @@
+@echo off
+rem GPT-SoVITS (upstream main, 洛琪希 v2ProPlus 微调模型) API for qq-bridge.
+rem Listens on 127.0.0.1:9880; started by qq-bridge\watchdog.ps1 when the port is down.
+cd /d "%~dp0"
+set "PATH=D:\RVC\RVC1006Nvidia;%PATH%"
+set "PYTHONIOENCODING=utf-8"
+"D:\tools\gsv\venv\Scripts\python.exe" api_v2.py -a 127.0.0.1 -p 9880 -c gsv-roxy.yaml >> "%~dp0tts-api.log" 2>&1

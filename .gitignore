@@ -1,0 +1,13 @@
+# 运行时数据：参考音频、生成的语音、日志、本地配置
+ref/
+audio/
+state/
+config.json
+node_modules/
+*.log
+*.wav
+*.mp3
+*.pth
+*.ckpt
+*.index
+*.onnx
