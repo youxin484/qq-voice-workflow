@@ -41,6 +41,7 @@ patches/
   gsv-version-assertion.patch  修上游 v2Pro/v2ProPlus 断言 bug
   jieba_fast.py        jieba_fast 编译失败时的等价垫片
 docs/
+  install-on-new-machine.md  换一台电脑安装 / 从旧机器迁移的完整清单
   architecture.md      流水线细节、时延、显存预算
   setup-gsv.md         GPT-SoVITS 安装（含踩过的坑）
   setup-rvc.md         RVC 安装与音色模型放置
